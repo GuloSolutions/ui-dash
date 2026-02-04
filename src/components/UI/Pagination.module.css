@@ -1,0 +1,80 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  font-size: 0.875rem;
+}
+
+.info {
+  color: var(--text-secondary);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navBtn,
+.pageBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.navBtn:hover:not(:disabled),
+.pageBtn:hover:not(.active) {
+  background-color: var(--bg-hover);
+}
+
+.navBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageBtn.active {
+  background-color: var(--accent-info);
+  border-color: var(--accent-info);
+  color: white;
+}
+
+.ellipsis {
+  padding: 0 8px;
+  color: var(--text-tertiary);
+}
+
+.perPage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.select {
+  padding: 6px 28px 6px 12px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--input-focus-border);
+}

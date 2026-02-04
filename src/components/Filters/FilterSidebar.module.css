@@ -1,0 +1,59 @@
+.sidebar {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.group {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.groupTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.clearBtn {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--accent-blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clearBtn:hover {
+  text-decoration: underline;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emptyText {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+  line-height: 1.4;
+}

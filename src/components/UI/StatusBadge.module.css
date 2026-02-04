@@ -1,0 +1,49 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.notBooked {
+  background-color: var(--status-not-booked-bg);
+  color: var(--status-not-booked);
+}
+
+.unqualified {
+  background-color: var(--status-unqualified-bg);
+  color: var(--status-unqualified);
+}
+
+.followUp {
+  background-color: var(--status-follow-up-bg);
+  color: var(--status-follow-up);
+}
+
+.missed {
+  background-color: var(--status-missed-bg);
+  color: var(--status-missed);
+}
+
+.newLead {
+  background-color: var(--status-new-lead-bg);
+  color: var(--status-new-lead);
+}
+
+.lost {
+  background-color: var(--status-lost-bg);
+  color: var(--status-lost);
+}
+
+.booked {
+  background-color: var(--status-booked-bg);
+  color: var(--status-booked);
+}
+
+.cancellation {
+  background-color: var(--status-cancellation-bg);
+  color: var(--status-cancellation);
+}

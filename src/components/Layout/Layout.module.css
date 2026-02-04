@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: 16rem;
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  transition: margin-left 0.2s ease;
+}
+
+.layout.sidebarCollapsed .main {
+  margin-left: 4rem;
+}
