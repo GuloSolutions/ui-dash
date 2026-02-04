@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { format } from 'date-fns';
-import { Download, Plus, Pencil, Copy } from 'lucide-react';
+import { Download, Plus, Pencil, Copy, Phone, MessageSquare, FileText, MessageCircle } from 'lucide-react';
 import { Header } from '../../components/Layout';
 import { MetricCard, StatusBadge, SearchInput, Pagination } from '../../components/UI';
 import { FilterSidebar } from '../../components/Filters';
@@ -13,6 +13,16 @@ const LEAD_STATUSES: LeadStatus[] = ['Follow-Up', 'Missed', 'Not Booked', 'Unqua
 const LEAD_SOURCES: LeadSource[] = ['Google PPC', 'Google LSA', 'Yelp', 'Organic'];
 const LEAD_TYPES: LeadType[] = ['Message', 'Form', 'Call', 'Chat'];
 const CSR_TYPES: CSRType[] = ['AI Agent', 'Automated System', 'Live Agent'];
+
+const TypeIcon = ({ type }: { type: LeadType }) => {
+  const icons = {
+    'Call': <Phone size={16} />,
+    'Message': <MessageSquare size={16} />,
+    'Form': <FileText size={16} />,
+    'Chat': <MessageCircle size={16} />,
+  };
+  return <span title={type}>{icons[type]}</span>;
+};
 
 interface ScorecardsProps {
   onLeadClick: (lead: Lead) => void;
@@ -165,7 +175,7 @@ export function Scorecards({ onLeadClick }: ScorecardsProps) {
                       <td className={styles.nameCell}>{lead.name}</td>
                       <td><StatusBadge status={lead.status} /></td>
                       <td>{lead.leadSource}</td>
-                      <td>{lead.type}</td>
+                      <td className={styles.typeCell}><TypeIcon type={lead.type} /></td>
                       <td className={styles.contactCell}>
                         <span>{lead.contact}</span>
                         <button

@@ -280,6 +280,10 @@
   font-weight: 500;
 }
 
+.typeCell {
+  color: var(--text-secondary);
+}
+
 .contactCell {
   display: flex;
   align-items: center;
